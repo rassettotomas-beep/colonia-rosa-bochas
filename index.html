@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colonia Rosa Bochas Club - Comercial de Bochas</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="pelota">●</div>
+
+        <div>
+            <h1>COLONIA ROSA BOCHAS CLUB</h1>
+            <h2>COMERCIAL DE BOCHAS</h2>
+        </div>
+    </header>
+
+
+    <main class="contenedor">
+
+        <!-- INICIO -->
+        <section id="inicio" class="seccion activa">
+
+            <div class="tarjeta bienvenida">
+
+                <div class="icono-trofeo">🏆</div>
+
+                <h2>Comercial de Bochas</h2>
+
+                <p>
+                    Administrá las zonas, equipos, jugadores y resultados
+                    de tu campeonato.
+                </p>
+
+                <button class="boton boton-principal" onclick="mostrarSeccion('zonas')">
+                    ⚙️ CONFIGURAR CAMPEONATO
+                </button>
+
+            </div>
+
+
+            <div class="resumen">
+
+                <div class="resumen-card">
+                    <span>🏟️</span>
+                    <strong id="cantidadZonas">0</strong>
+                    <small>Zonas</small>
+                </div>
+
+                <div class="resumen-card">
+                    <span>👥</span>
+                    <strong id="cantidadEquipos">0</strong>
+                    <small>Equipos</small>
+                </div>
+
+                <div class="resumen-card">
+                    <span>🎯</span>
+                    <strong id="cantidadPartidos">0</strong>
+                    <small>Partidos</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ZONAS -->
+        <section id="zonas" class="seccion">
+
+            <div class="titulo-seccion">
+                <div>
+                    <h2>🏟️ Zonas</h2>
+                    <p>Creá las zonas y elegí cuántos equipos tendrá cada una.</p>
+                </div>
+
+                <button class="boton boton-principal" onclick="crearZona()">
+                    ➕ CREAR ZONA
+                </button>
+            </div>
+
+
+            <div id="listaZonas" class="lista-zonas"></div>
+
+        </section>
+
+
+        <!-- EQUIPOS -->
+        <section id="equipos" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <div>
+                    <h2>👥 Equipos</h2>
+                    <p>Configurá los equipos y sus cuatro jugadores.</p>
+                </div>
+
+            </div>
+
+            <div id="listaEquipos"></div>
+
+        </section>
+
+
+        <!-- PARTIDOS -->
+        <section id="partidos" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <div>
+                    <h2>🎯 Resultados</h2>
+                    <p>Cargá los resultados de los partidos.</p>
+                </div>
+
+            </div>
+
+            <div id="listaPartidos"></div>
+
+        </section>
+
+
+        <!-- TABLAS -->
+        <section id="tablas" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <div>
+                    <h2>📊 Tablas de posiciones</h2>
+                    <p>Las posiciones se actualizan automáticamente.</p>
+                </div>
+
+            </div>
+
+            <div id="listaTablas"></div>
+
+        </section>
+
+
+        <!-- REINICIAR -->
+        <section class="zona-reiniciar">
+
+            <button class="boton boton-peligro" onclick="reiniciarCampeonato()">
+                🗑️ REINICIAR CAMPEONATO
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav class="navegacion">
+
+        <button onclick="mostrarSeccion('inicio')">
+            🏠
+            <span>Inicio</span>
+        </button>
+
+        <button onclick="mostrarSeccion('zonas')">
+            🏟️
+            <span>Zonas</span>
+        </button>
+
+        <button onclick="mostrarSeccion('equipos')">
+            👥
+            <span>Equipos</span>
+        </button>
+
+        <button onclick="mostrarSeccion('partidos')">
+            🎯
+            <span>Resultados</span>
+        </button>
+
+        <button onclick="mostrarSeccion('tablas')">
+            📊
+            <span>Tablas</span>
+        </button>
+
+    </nav>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
